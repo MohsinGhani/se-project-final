@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 17, 2018 at 06:27 PM
+-- Generation Time: May 18, 2018 at 01:59 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `university`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `offered_course`
+--
+
+DROP TABLE IF EXISTS `offered_course`;
+CREATE TABLE IF NOT EXISTS `offered_course` (
+  `code` varchar(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `program` varchar(20) NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `offered_course`
+--
+
+INSERT INTO `offered_course` (`code`, `name`, `program`) VALUES
+('w', 'w', 'BS-CS');
 
 -- --------------------------------------------------------
 
