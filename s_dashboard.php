@@ -29,6 +29,7 @@
   <link href="css/s_dashboard.css" rel="stylesheet">
   <!-- bootstrap -->
   <?php
+      session_start();
       require 'components/header_files.php';
   ?>
 </head>
@@ -38,6 +39,10 @@
   ?>
     <div>
       <div class="courseOptionsHolder">
+      <?php
+        // echo "Email is  " . $_SESSION["email"] . ".";
+        // echo "type is  " . $_SESSION["type"] . ".";
+      ?>
         <ul>
           <li>
             <a href="index2.php">Course Registration</a>

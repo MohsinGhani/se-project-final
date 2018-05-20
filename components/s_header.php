@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <header class="main__header" style="margin-top: -16px;">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 

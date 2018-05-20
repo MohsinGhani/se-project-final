@@ -31,10 +31,10 @@
 		
 			<div class="inner_container" style="padding-bottom: 10px;">
 				<label><b>Student Email</b></label>
-				<input type="email" placeholder="Enter Yur Email" name="email" required>
+				<input type="text" class="form-control" placeholder="Enter Your Email" name="email" id="email" value="" required>
 				<label><b>Password</b></label>
-				<input type="password" placeholder="Enter Password" name="password" required>
-				<input type="hidden" class="form-control" name="type" value="student" required>
+				<input type="password" class="form-control"  placeholder="Enter Password" name="password" required>
+				<input type="hidden" class="form-control" name="type" id="type" value="student" required>
 				<button class="login_button" style="width: 96%; background: #666;" name="login" type="submit">Login</button>
 			</div>
 		</form>
@@ -45,7 +45,7 @@
 				$email=$_POST['email'];
 				$password=$_POST['password'];
 				$type=$_POST['type'];
-
+				
 				$query = "SELECT * FROM `student` WHERE email = '$email' AND password = '$password' ";
 				//echo $query;
 				$query_run = mysqli_query($con,$query);
@@ -54,7 +54,8 @@
 				{
 					if(mysqli_num_rows($query_run)>0)
 					{
-						$row = mysqli_fetch_array($query_run,MYSQLI_ASSOC);
+						$_SESSION["email"] = $email;
+						$_SESSION["type"] = $type;
 						header( "Location: s_dashboard.php");
 					}
 					else
@@ -73,5 +74,6 @@
 		?>
 		
 	</div>
+	
 </body>
 </html>

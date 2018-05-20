@@ -1,18 +1,3 @@
-<?php 
-
-  // session_start();
-
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $db = "university";
-
-  // Create connection
-  $con = new mysqli($servername, $username, $password, $db);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,24 +18,12 @@
   ?>
 </head>
   <body>
-  <header class="main__header" style="margin-top: -16px;">
-  <div class="container">
-    <nav class="navbar navbar-default" role="navigation"> 
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <h1 class="navbar-brand"><a href="#">Distance Learning</a></h1>
-      </div>
-      
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-right navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="index.php">Logout</a></li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse --> 
-    </nav>
-  </div>
-</header>
+  <?php
+      require 'components/t_header.php';
+  ?>
+  <?php
+        echo "Email is  " . $_SESSION["email"] . ".";
+        echo "type is  " . $_SESSION["type"] . ".";
+      ?>
   </body>
 </html>  

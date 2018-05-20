@@ -54,7 +54,8 @@
 				{
 					if(mysqli_num_rows($query_run)>0)
 					{
-						$row = mysqli_fetch_array($query_run,MYSQLI_ASSOC);
+						$_SESSION["email"] = $email;
+						$_SESSION["type"] = $type;
 						header( "Location: t_dashboard.php");
 					}
 					else
