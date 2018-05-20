@@ -1,6 +1,22 @@
 <?php
   session_start();
 ?>
+
+<?php 
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $db = "university";
+  // Create connection
+  $con = new mysqli($servername, $username, $password, $db);
+
+  $email = $_SESSION["email"];
+  $type = $_SESSION["type"];
+  $query = "SELECT * from student where email='".$email."'";
+  $result = mysqli_query($con, $query) or die ( mysqli_error());
+  $student = mysqli_fetch_assoc($result);
+?>
+
 <header class="main__header" style="margin-top: -16px;">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
@@ -13,7 +29,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-right navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="index.php">COURSE REGISTRATION</a></li>
+          <li><a href="s_course_registeration.php">COURSE REGISTRATION</a></li>
           <li><a href="index.php">YOUR PERFORMANCE</a></li>
           <li><a href="index.php">SCHEDULE</a></li>
           <li><a href="index.php">GENERAL INFORMATION</a></li>

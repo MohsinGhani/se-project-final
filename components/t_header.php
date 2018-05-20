@@ -29,6 +29,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-right navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          <li><a href="t_dashboard.php">My Offered Course</a></li>
           <li><a href="t_add_course.php">Offer Course</a></li>
           <li class="active"><a href="index.php">Logout</a></li>
         </ul>

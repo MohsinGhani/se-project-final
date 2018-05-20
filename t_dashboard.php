@@ -21,9 +21,12 @@
   <?php
       require 'components/t_header.php';
   ?>
+
   <?php
-        echo "Email is  " . $_SESSION["email"] . ".";
-        echo "type is  " . $_SESSION["type"] . ".";
-      ?>
+    $checkQuery = mysqli_query($con, "SELECT * FROM available_course WHERE t_email='".$teacher['email']."'") or die (mysqli_error($dbconnect));
+    while ($offeredCourses = mysqli_fetch_array($checkQuery)) {
+      echo $offeredCourses['course_name'];
+    }
+  ?>
   </body>
 </html>  

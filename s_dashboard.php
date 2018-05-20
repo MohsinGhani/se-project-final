@@ -29,7 +29,6 @@
   <link href="css/s_dashboard.css" rel="stylesheet">
   <!-- bootstrap -->
   <?php
-      session_start();
       require 'components/header_files.php';
   ?>
 </head>
