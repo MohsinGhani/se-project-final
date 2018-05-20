@@ -31,6 +31,7 @@
   <?php
       require 'components/header_files.php';
   ?>
+  
 </head>
   <body>
   <?php

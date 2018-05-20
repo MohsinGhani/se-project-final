@@ -29,8 +29,19 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-right navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="t_dashboard.php">My Offered Course</a></li>
-          <li><a href="t_add_course.php">Offer Course</a></li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lecture</a>
+            <ul class="dropdown-menu">
+              <li><a href="t_create_lecture.php">Make Lecture</a></li>
+              <li><a href="t_lecture_list.php">Lecture List</a></li>
+              <li><a href="t_take_lecture.php">Take Lecture</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course</a>
+            <ul class="dropdown-menu">
+              <li><a href="t_add_course.php">Offer Course</a></li>
+              <li><a href="t_dashboard.php">My Offered Courses</a></li>
+            </ul>
+          </li>
           <li class="active"><a href="index.php">Logout</a></li>
         </ul>
       </div>
