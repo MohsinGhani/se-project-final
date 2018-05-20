@@ -31,35 +31,66 @@
   <?php
       require 'components/header_files.php';
   ?>
+
+  <style>
+    .content{
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px 0 #ccc;
+      margin-bottom: 100px;
+      margin-top: 20px;
+      border: 3px solid #555;
+    }
+  </style>
 </head>
   <body>
   <?php
       require 'components/s_header.php';
   ?>
-    <div>
-      <div class="courseOptionsHolder">
+    <div class="container content">
       <?php
         // echo "Email is  " . $_SESSION["email"] . ".";
         // echo "type is  " . $_SESSION["type"] . ".";
       ?>
-        <ul>
-          <li>
-            <a href="index2.php">Course Registration</a>
-          </li>
-          <li>
-            <a href="vt.php">Your Performance</a>
-          </li>
-          <li>
-            <a href="#">announcement</a>
-          </li>
-          <li>
-            <a href="#">schedule</a>
-          </li>
-          <li>
-            <a href="#">General information</a>
-          </li>
-        </ul>
-      </div>
+      <h2 style="text-align: center;">Your Schedule</h2>
+      <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Course Code</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Section</th>
+                    <th scope="col">Days</th>
+                    <th scope="col">Timeslot</th>
+                    <th scope="col">Teacher Name</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $email = $_SESSION["email"];
+                $query = mysqli_query($con, "SELECT * FROM student_course WHERE s_email='".$email."'") or die (mysqli_error($dbconnect));
+                while ($row = mysqli_fetch_array($query)) {
+                    $course_id = $row['course_id'];
+                    $getCourseQuery = "SELECT * from available_course WHERE id='".$course_id."'";
+                    $result = mysqli_query($con, $getCourseQuery) or die ( mysqli_error());
+                    $course = mysqli_fetch_assoc($result);
+                    echo
+                        "<tr>
+                            <td>{$course['course_code']}</td>
+                            <td>{$course['course_name']}</td>
+                            <td>{$course['section']}</td>
+                            <td>{$course['days']}</td>
+                            <td>{$course['time_slot']}</td>
+                            <td>{$course['t_name']}</td>
+                        </tr>";
+                    }
+            ?>
+            
+            </tbody>
+        </table>
+
+
+
     </div>
   </body>
 </html>  

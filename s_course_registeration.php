@@ -79,7 +79,7 @@
                         $query = "SELECT * from available_course where id='".$course_id."'";
                         $result = mysqli_query($con, $query) or die ( mysqli_error());
                         $course = mysqli_fetch_assoc($result);
-                        if($course['course_code'] == $currentCourse['course_code'] && $course['time_slot'] == $currentCourse['time_slot'] && $course['days'] == $currentCourse['days'] && $course['section'] == $currentCourse['section']){
+                        if( $course['time_slot'] == $currentCourse['time_slot'] && $course['days'] == $currentCourse['days'] && $course['section'] == $currentCourse['section']){
                             $isSlotFree = false;
                         }
                     }
@@ -89,7 +89,11 @@
                         $query_run = mysqli_query($con,$insertQuery);
                         if($query_run)
                         {
-                          echo '<script type="text/javascript">alert("Course has been successfully added")</script>';
+                          echo '<script type="text/javascript">
+                                    alert("Course has been successfully added");
+                                    window.location.assign("s_dashboard.php");
+                                </script>';
+        
                         }
                         else
                         {
