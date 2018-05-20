@@ -33,7 +33,6 @@
             <ul class="dropdown-menu">
               <li><a href="t_create_lecture.php">Make Lecture</a></li>
               <li><a href="t_lecture_list.php">Lecture List</a></li>
-              <li><a href="t_take_lecture.php">Take Lecture</a></li>
             </ul>
           </li>
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course</a>
