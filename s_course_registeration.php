@@ -37,27 +37,67 @@
             <?php
                 $query = mysqli_query($con, "SELECT * FROM available_course") or die (mysqli_error($dbconnect));
                 while ($row = mysqli_fetch_array($query)) {
-                    echo
-                        "<tr>
-                            <td>{$row['course_code']}</td>
-                            <td>{$row['course_name']}</td>
-                            <td>{$row['section']}</td>
-                            <td>{$row['days']}</td>
-                            <td>{$row['time_slot']}</td>
-                            <td>{$row['t_name']}</td>
-                            <td style='display: flex'>
-                                <form action='s_course_registeration.php' method='post'>
-                                    <input type='hidden' name='id' value='{$row['id']}'/>
-                                    <input type='submit' name='add_btn' class='btn btn-secondary btn-sm' value='Add' />
-                                </form>
-                            </td>
-                        </tr>";
+                    $course_id = $row['id'];
+                    $isEnrolledQuery = "SELECT * from student_course where course_id='".$course_id."'";
+                    $result = mysqli_query($con, $isEnrolledQuery) or die ( mysqli_error());
+                    $course = mysqli_fetch_assoc($result);
+                    if( $course['course_id'] == $row['id']){
+
+                    }else{
+                        echo
+                            "<tr>
+                                <td>{$row['course_code']}</td>
+                                <td>{$row['course_name']}</td>
+                                <td>{$row['section']}</td>
+                                <td>{$row['days']}</td>
+                                <td>{$row['time_slot']}</td>
+                                <td>{$row['t_name']}</td>
+                                <td style='display: flex'>
+                                    <form action='s_course_registeration.php' method='post'>
+                                        <input type='hidden' name='id' value='{$row['id']}'/>
+                                        <input type='submit' name='add_btn' class='btn btn-secondary btn-sm' value='Add' />
+                                    </form>
+                                </td>
+                            </tr>";
+                    }
                     
                     }
             ?>
             <?php
                 if(isset($_POST['add_btn'])) {
-                    echo $_POST['id'];
+                    $id = $_POST['id'];
+                    $s_email = $_SESSION["email"];
+                    $isSlotFree = true;
+                    
+                    $query = "SELECT * from available_course where id='".$id."'";
+                    $result = mysqli_query($con, $query) or die ( mysqli_error());
+                    $currentCourse = mysqli_fetch_assoc($result);
+                    
+                    $query1 = mysqli_query($con, "SELECT * FROM student_course WHERE s_email='".$s_email."'") or die (mysqli_error($dbconnect));
+                    while ($row = mysqli_fetch_array($query1)) {
+                        $course_id = $row['course_id'];
+                        $query = "SELECT * from available_course where id='".$course_id."'";
+                        $result = mysqli_query($con, $query) or die ( mysqli_error());
+                        $course = mysqli_fetch_assoc($result);
+                        if($course['course_code'] == $currentCourse['course_code'] && $course['time_slot'] == $currentCourse['time_slot'] && $course['days'] == $currentCourse['days'] && $course['section'] == $currentCourse['section']){
+                            $isSlotFree = false;
+                        }
+                    }
+
+                    if($isSlotFree){
+                        $insertQuery = "INSERT INTO student_course(s_email,course_id) VALUES ('$s_email','$id')";
+                        $query_run = mysqli_query($con,$insertQuery);
+                        if($query_run)
+                        {
+                          echo '<script type="text/javascript">alert("Course has been successfully added")</script>';
+                        }
+                        else
+                        {
+                          echo "Error: " . mysqli_error($con);
+                        }
+                      }else{
+                        echo '<script type="text/javascript">alert("You have already enrolled")</script>';
+                      }
                 }
             ?>
             </tbody>

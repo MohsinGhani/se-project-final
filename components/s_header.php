@@ -30,9 +30,9 @@
       <div class="collapse navbar-right navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="s_course_registeration.php">COURSE REGISTRATION</a></li>
-          <li><a href="index.php">YOUR PERFORMANCE</a></li>
-          <li><a href="index.php">SCHEDULE</a></li>
-          <li><a href="index.php">GENERAL INFORMATION</a></li>
+          <!-- <li><a href="index.php">YOUR PERFORMANCE</a></li> -->
+          <li><a href="s_dashboard.php">SCHEDULE</a></li>
+          <!-- <li><a href="index.php">GENERAL INFORMATION</a></li> -->
           <li class="active"><a href="index.php">Logout</a></li>
         </ul>
       </div>
