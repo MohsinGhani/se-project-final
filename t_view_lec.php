@@ -100,7 +100,7 @@
             </table>
             </div>
         </div>
-        <a href="/se-project/webrtc/public/?id=<?php echo $row['id']; ?>&type=teacher" style="margin-bottom:20px" class="btn btn-primary btn-block btn-sm">Start Lecture</a>
+        <a href="/final/webrtc/public/?id=<?php echo $row['id']; ?>&type=teacher" style="margin-bottom:20px" class="btn btn-primary btn-block btn-sm">Start Lecture</a>
     </div>
     </div>
   </body>

@@ -29,11 +29,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-right navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="s_course_registeration.php">COURSE REGISTRATION</a></li>
+          <li><a href="/final/webrtc/public/?id=<?php echo $_SESSION['lec_id']; ?>&type=student">ATTEND LECTURE</a></li>
+          <li><a href="/final/s_course_registeration.php">COURSE REGISTRATION</a></li>
           <!-- <li><a href="index.php">YOUR PERFORMANCE</a></li> -->
-          <li><a href="s_dashboard.php">SCHEDULE</a></li>
+          <li><a href="/final/s_dashboard.php">SCHEDULE</a></li>
           <!-- <li><a href="index.php">GENERAL INFORMATION</a></li> -->
-          <li class="active"><a href="index.php">Logout</a></li>
+          <li class="active"><a href="/final/index.php">Logout</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
