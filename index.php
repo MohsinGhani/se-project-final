@@ -72,21 +72,21 @@
     <hr>
     <div class="row text-center three-blocks">
       <div class="col-md-4"> <img src="http://www.htmlpreviews.com/cloud/university/eterations7/images/content__images/pic1.jpg" alt="image" class="img-rounded img-responsive">
-        <h3>IDENTITY</h3>
+        <h3>Business Management</h3>
         <hr>
-        <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+        <p>Want to excel at finance or managing people? Our online business and management courses will help. Further your career with communication, networking and project management courses. Take leadership training with top universities and business schools.</p>
         <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
       </div>
       <div class="col-md-4"> <img src="http://www.htmlpreviews.com/cloud/university/eterations7/images/content__images/pic2.jpg" alt="image" class="img-rounded img-responsive">
-        <h3>WEB DESIGN</h3>
+        <h3>Tech & Coding Courses</h3>
         <hr>
-        <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+        <p>Learn to code or develop your programming skills with online coding courses - from beginner to advanced level. Explore technology trends - like big data, cyber security, data science or digital marketing - with flexible courses from top universities.</p>
         <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
       </div>
       <div class="col-md-4"> <img src="http://www.htmlpreviews.com/cloud/university/eterations7/images/content__images/pic3.jpg" alt="image" class="img-rounded img-responsive">
-        <h3>PHOTOS</h3>
+        <h3>Teaching Courses</h3>
         <hr>
-        <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+        <p>Join online teaching courses to support teachers' professional learning and development. Enhance how you teach subjects such as English as a foreign language.</p>
         <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
       </div>
     </div>
@@ -138,11 +138,9 @@
           If you have any questions about our products or services, please do not hesitate to contact us. We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
       </div>
       <div class="col-md-3">
-        <h3>Tweets</h3>
-        <p><span>Tweet</span> <a href="#">@You</a><br />
-          Etiam egestas, ipsum posuere accumsan sollicitudin, nulla mauris volutpat sem, sit amet rutrum risus. </p>
-        <p><span>Tweet</span> <a href="#">@You</a><br />
-          Quisque porta tellus vitae adipiscing molestie. Mauris et lacus blandit, malesuada.</p>
+        <h3>Tweet</h3>
+        <p><span>Tweet</span> <a href="#">@ProjectA</a><br />
+          You can contact us in tweeter also. </p>
       </div>
       <div class="col-md-3">
         <h3>Mailing list</h3>
@@ -158,11 +156,11 @@
       </div>
       <div class="col-md-3">
         <h3>Social</h3>
-        <p>123 Business Way<br />
-          San Francisco, CA 94108<br />
-          USA<br />
+        <p>Block-6 P.E.C.H.S<br />
+          Shahrah-e-Faisal<br />
+          Karachi<br />
           <br />
-          Phone: (888) 123-4567<br />
+          Phone: (+92) 123-4567<br />
           Fax: (887) 123-4567<br />
           <br />
         </p>
@@ -170,7 +168,7 @@
       </div>
     </div>
     <hr>
-    <p class="text-center">&copy; Copyright ABC Company. All Rights Reserved.</p>
+    <p class="text-center">&copy; Copyright Distance Learning. All Rights Reserved.</p>
   </div>
 </footer>
 

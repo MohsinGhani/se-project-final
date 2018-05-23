@@ -10,7 +10,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-right navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <!-- <li class="active"><a href="http://www.htmlpreviews.com/cloud/university/eterations7/index.html">Home</a></li> -->
+          <li><a href="index.php">Home</a></li>
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration</a>
             <ul class="dropdown-menu">
               <li><a href="s_registration.php">Registration as Student</a></li>
